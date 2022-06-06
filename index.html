@@ -19,21 +19,77 @@
             <br> 
             <input class="form-control" type="password" placeholder="Password">
             <br>
-            <button id="login" class="btn btn-success">Submit</button>
+            <button id="submit" class="btn btn-success">Submit</button>
         </div>
     </div>
 
     <div id="transaction-area">
-        <h1>Transaction Area</h1>
+        <div >
+            <div class="row">
+                <div class="col-md-3" style=background:slateblue>
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div>
+                <div class="col-md-3" style=background:lightsalmon>
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+                <div class="col-md-3" style=background:orange>
+                    <h5>Balance</h5>
+                    <h2>$1470</h2>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+    <div id="transaction-area-2">
+        <div class="row deposit-withdraw-btn">
+            <div class="col-md-5 submit-area">
+                <h3>Deposit</h3>
+                <input id="deposite-amount" class="form-control col-md-5" type="text" placeholder="$ amount you want to deposite">
+                <br>
+                <button id="deposit-btn" class="btn btn-success btn-padding">Deposite</button>
+                
+            </div>
+            <div class="col-md-5 submit-area">
+                <h3>Withdraw</h3>
+                <input id="withdraw-amount" class="form-control col-md-5" type="text" placeholder="$ amount you want to withdraw">
+                <br>
+                <button id="withdraw-btn" class="btn btn-success btn-padding">Withdraw</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
     <script>
-        const loginBtn = document.getElementById("login");
+        //login button event handler::::
+        const loginBtn = document.getElementById("submit");
         loginBtn.addEventListener("click",function(){
             const loginArea = document.getElementById("login-area");
             loginArea.style.display = "none";
             const transactionArea = document.getElementById("transaction-area");
             transactionArea.style.display = "block";
+            const transactionArea2 = document.getElementById("transaction-area-2");
+            transactionArea2.style.display = "block";
+        });
+
+        //deposit button event handler::::
+        const depositBtn = document.getElementById("deposit-btn");
+        depositBtn.addEventListener("click",function(){
+            const depositAmount = document.getElementById("deposite-amount").value;
+            const depositNumber = parseFloat("depositAmount");
+            
+
+
+        });
+
+        //withdraw button event handler::::
+        const withdrawBtn = document.getElementById("withdraw-btn");
+        withdrawBtn.addEventListener("click",function(){
+            console.log("ami programming partesi Alhamdulillah");
         });
 
     </script>
